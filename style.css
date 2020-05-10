@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif; 
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    grid-template-areas: 
+    "header header"
+    "section1 section1"
+    "section2 section2"
+    "section3 section3"
+    "footer footer";
+    
+}
+/*Header start*/
+header{
+    grid-area:header;
+    padding-bottom: 1.5rem;
+    background-color:#8e8741;
+}
+.container-header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+/*menu*/
+header ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 1rem;
+}
+header ul li{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-right: .6rem;
+} 
+header ul li a{
+    text-decoration: none;
+    color: black;
+}
+header ul li a:hover{
+    color:#fbeec1;
+}
+/*logo*/
+.logo{
+    margin-left: 1rem;
+    color:#fbeec1;
+    font-size: 2rem;
+}
+/*Header end*/
+/*Section 1 start*/
+.section1{
+    grid-area: section1;
+    background-color: #659ebc;
+}
+.section1-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 2rem;
+}
+.section1-container h1{
+    font-size: 3rem;
+    color: white;
+    line-height: 150%;
+}
+.section1-container h1 strong{
+    color:#fbeec1 ;
+}
+.section1 img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+/*Section 1 end*/
+/*Section 2 start*/
+.section2{
+    grid-area: section2;
+}
+.section2 h2{
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    color:#8e8741;
+}
+.section2 h3{
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+.section2 p{
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.28rem;
+    width: 50%;
+}
+.section2 p a{
+    text-decoration: none;
+    color: #659ebc;
+}
+.project{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 2rem;
+}
+.project-description{
+    width: 50%;
+}
+.project figure{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+/*Section 2 end*/
+/*Section 3 start*/
+.section3{
+    grid-area: section3;
+    padding-bottom: 2rem;
+}
+.section3 h2{
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    color:#8e8741;
+}
+.section3-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 1.8rem;
+
+    
+}
+.section3-post{
+    background-color:#bd986b;
+    border-radius: 10px;
+    padding-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    width: 45%;
+}
+.section3-img{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.section3-description{
+    background-color: #fbeec1;
+    border-radius: 10px;
+    position: relative;
+    padding:1rem;
+    margin: -30px 40px;
+    text-align: center;  
+}
+.section3-description-heading{
+    padding: 1rem;
+}
+.section3-description-paragraph{
+    padding: 1rem;
+}
+.section3-button{
+    border-radius: 10px;
+    padding: .5rem;
+    font-weight: 700;
+    background-color:#659ebc;
+}
+.section3-button a{
+    text-decoration: none;
+    color: white;
+}
+/*Section 3 end*/
+/*Footer start*/
+footer{
+    grid-area:footer;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color:#fbeec1;
+}
+.socilamedia  a{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    padding-left: 0.5rem;
+}
+.socilamedia h3{
+    color:#8e8741 ;
+    padding-bottom: .5rem;
+    margin-right: 0.5rem;
+}
+.copy{
+    flex-basis: 100%;
+    background-color:#8e8741;
+    font-size: .8rem;
+}
+/*Footer end*/
+/*media queries*/
+@media (max-width: 924px) { 
+    .section1-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .section1-container h1{
+        font-size: 1.5rem;
+    }
+    .section1 img{
+        width: 100%;
+    }
+}
+@media(max-width:686px){
+    .project{
+        display: flex;
+        flex-direction: column;
+    }
+    .section2 p{
+        width: 100%;
+    }
+    .section3-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;   
+    }
+    .section3-post{
+        flex-basis: 100%;
+    }
+}
+@media(max-width:606px){
+    .container-header{
+        display: flex;
+        flex-direction: column;
+    }
+}
